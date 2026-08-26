@@ -46,6 +46,11 @@ fi
     echo "      - AGENCY_ID=${i}"
     echo "      - SERVER_HOST=server"
     echo "      - SERVER_PORT=5678"
+    echo "      - INPUT_FILE=/input/input-${i}.csv"
+    echo "      - OUTPUT_FILE=/output/output-${i}.csv"
+    echo "    volumes:"
+    echo "      - ./input:/input"
+    echo "      - ./output:/output"
   done
 } > "$OUTPUT_FILE"
 
